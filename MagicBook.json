@@ -117,6 +117,6 @@ give @p minecraft:written_book 1 0 {title:"Magic Book",author:"The_Webmage",page
 	{text:'Updated by\n',color:black},
 	{text:'Roman0\n\n',color:dark_aqua,clickEvent:{action:open_url,value:'https://github.com/romano'}},
 	{text:'Latest version can be found ',color:black},
-	{text:'here.',color:dark_aqua,clickEvent:{action:open_url,value:'https://github.com/romano/commands-json/blob/master/Magic%20Book'}}
+	{text:'here.',color:dark_aqua,clickEvent:{action:open_url,value:'https://github.com/romano/commands-json/blob/master/MagicBook.json'}}
 	]}"
 ]}
