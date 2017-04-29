@@ -1,4 +1,4 @@
-#Magic Book v1.11.0 by [The_Webmage](https://github.com/TheWebmage)
+# Magic Book v1.11.0 by [The_Webmage](https://github.com/TheWebmage)
 
 How to use:  
 1. Paste `/give @p minecraft:command_block` into Minecraft chat  
