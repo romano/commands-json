@@ -1,10 +1,10 @@
-give @p minecraft:written_book 1 0 {title:"Magic Book",author:"The_Webmage",pages:[
+give @p minecraft:written_book{generation:3,title:"Magic Book",author:"The_Webmage",pages:[
 
 "{text:'Clear\\n\\n',extra:[
 	{text:'* Entities\\n',color:black},
-	{text:' 128 blocks',color:dark_aqua,clickEvent:{action:run_command,value:'/kill @e[type=!Player,r=128]'}},
+	{text:' 128 blocks',color:dark_aqua,clickEvent:{action:run_command,value:'/kill @e[type=!minecraft:player,distance=..128]'}},
 	{text:' | ',color:black},
-	{text:'Global\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/kill @e[type=!Player]'}},
+	{text:'Global\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/kill @e[type=!minecraft:player]'}},
 	{text:'* Scoreboard\\n',color:black},
 	{text:' Player',color:dark_aqua,clickEvent:{action:run_command,value:'/scoreboard players reset @p'}},
 	{text:' | ',color:black},
@@ -15,19 +15,19 @@ give @p minecraft:written_book 1 0 {title:"Magic Book",author:"The_Webmage",page
 		{text:'* Command Block\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/give @p minecraft:command_block'}},
 		{text:'* Command Minecart\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/give @p minecraft:command_block_minecart'}},
 		{text:'* Dragon Egg\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/give @p minecraft:dragon_egg'}},
-		{text:'* Mob Spawner',color:dark_aqua,clickEvent:{action:run_command,value:'/give @p minecraft:mob_spawner'}}
+		{text:'* Mob Spawner',color:dark_aqua,clickEvent:{action:run_command,value:'/give @p minecraft:spawner'}}
 	]}",
 
 "{text:'Game Settings\\n\\n',extra:[
-	{text:'* Peaceful\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/difficulty 0'}},
-	{text:'* Easy\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/difficulty 1'}},
-	{text:'* Normal\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/difficulty 2'}},
-	{text:'* Hard\\n\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/difficulty 3'}},
+	{text:'* Peaceful\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/difficulty peaceful'}},
+	{text:'* Easy\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/difficulty easy'}},
+	{text:'* Normal\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/difficulty normal'}},
+	{text:'* Hard\\n\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/difficulty hard'}},
 
-	{text:'* Survival\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/gamemode 0'}},
-	{text:'* Creative\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/gamemode 1'}},
-	{text:'* Adventure\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/gamemode 2'}},
-	{text:'* Spectator',color:dark_aqua,clickEvent:{action:run_command,value:'/gamemode 3'}}
+	{text:'* Survival\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/gamemode survival'}},
+	{text:'* Creative\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/gamemode creative'}},
+	{text:'* Adventure\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/gamemode adventure'}},
+	{text:'* Spectator',color:dark_aqua,clickEvent:{action:run_command,value:'/gamemode spectator'}}
 	]}",
 
 "{text:'Time\\n\\n',extra:[
@@ -58,11 +58,11 @@ give @p minecraft:written_book 1 0 {title:"Magic Book",author:"The_Webmage",page
 	]}",
 
 "{text:'Summon Objects\\n\\n',extra:[
-	{text:'* Ender Crystal\\n\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/summon minecraft:ender_crystal ~ ~1 ~'}},
+	{text:'* Ender Crystal\\n\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/summon minecraft:end_crystal ~ ~1 ~'}},
 
 	{text:'Summon Effects\\n\\n',color:black},
-		{text:'* Lightning Bolt\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/execute @p ~ ~ ~ execute @e[type=!Player,r=32] ~ ~ ~ summon minecraft:lightning_bolt'}},
-		{text:'* Fireworks',color:dark_aqua,clickEvent:{action:run_command,value:'/summon minecraft:fireworks_rocket ~ ~1 ~ {Life:0,LifeTime:40,FireworksItem:{id:fireworks,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Flicker:1,Colors:[16711680],FadeColors:[65280]}]}}}}'}}
+		{text:'* Lightning Bolt\\n',color:dark_aqua,clickEvent:{action:run_command,value:'/execute at @p positioned ~ ~ ~ run execute at @e[type=!minecraft:player,distance=..32] positioned ~ ~ ~ run summon minecraft:lightning_bolt'}},
+		{text:'* Fireworks',color:dark_aqua,clickEvent:{action:run_command,value:'/summon minecraft:firework_rocket ~ ~1 ~ {Life:0,LifeTime:40,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Flicker:1,Colors:[16711680],FadeColors:[65280]}]}}}}'}}
 	]}",
 
 "{text:'Other Settings I\\n\\n',color:black,extra:[
@@ -111,7 +111,7 @@ give @p minecraft:written_book 1 0 {title:"Magic Book",author:"The_Webmage",page
 		{text:'Off',color:dark_aqua,clickEvent:{action:run_command,value:'/gamerule naturalRegeneration false'}}
 	]}",
 
-"{text:'Magic Book v1.12.2\\n\\n',extra:[
+"{text:'Magic Book v1.14.0\\n\\n',extra:[
 	{text:'Created by\\n',color:black},
 	{text:'The_Webmage\\n\\n',color:dark_aqua,clickEvent:{action:open_url,value:'https://github.com/TheWebmage'}},
 	{text:'Updated by\\n',color:black},
